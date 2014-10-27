@@ -1,0 +1,134 @@
+0	LOAD_CONST        -1
+3	LOAD_CONST        None
+6	IMPORT_NAME       'md5'
+9	STORE_NAME        'md5'
+
+12	LOAD_CONST        '<code_object pythonpit>'
+15	MAKE_FUNCTION_0   None
+18	STORE_NAME        'pythonpit'
+
+21	LOAD_CONST        '<code_object build_snowman>'
+24	MAKE_FUNCTION_0   None
+27	STORE_NAME        'build_snowman'
+30	LOAD_CONST        None
+33	RETURN_VALUE      None
+
+
+0	LOAD_CONST        36
+3	LOAD_CONST        46
+6	LOAD_CONST        35
+9	LOAD_CONST        37
+12	LOAD_CONST        57
+
+15	LOAD_CONST        27
+18	LOAD_CONST        45
+21	LOAD_CONST        55
+24	LOAD_CONST        29
+27	LOAD_CONST        3
+
+30	LOAD_CONST        44
+33	LOAD_CONST        38
+36	LOAD_CONST        29
+39	LOAD_CONST        15
+42	LOAD_CONST        39
+
+45	LOAD_CONST        29
+48	LOAD_CONST        0
+51	LOAD_CONST        35
+54	LOAD_CONST        32
+57	LOAD_CONST        59
+
+60	LOAD_CONST        29
+63	LOAD_CONST        3
+66	LOAD_CONST        43
+69	LOAD_CONST        44
+72	LOAD_CONST        54
+
+75	LOAD_CONST        29
+78	LOAD_CONST        12
+81	LOAD_CONST        45
+84	LOAD_CONST        54
+87	LOAD_CONST        42
+
+90	LOAD_CONST        43
+93	LOAD_CONST        44
+96	LOAD_CONST        37
+99	LOAD_CONST        29
+102	LOAD_CONST        0
+
+105	LOAD_CONST        55
+108	LOAD_CONST        54
+111	LOAD_CONST        29
+114	LOAD_CONST        15
+117	LOAD_CONST        35
+
+120	LOAD_CONST        47
+123	LOAD_CONST        47
+126	LOAD_CONST        35
+129	LOAD_CONST        46
+132	LOAD_CONST        49
+
+135	LOAD_CONST        63
+138	BUILD_LIST_46     None
+141	STORE_FAST        'crown'
+
+144	LOAD_GLOBAL       'int'
+147	LOAD_GLOBAL       'raw_input'
+150	LOAD_CONST        'The Royal Crown Only Responds to a Penguin of Purity: '
+153	CALL_FUNCTION_1   None
+156	CALL_FUNCTION_1   None
+159	STORE_FAST        'magic_key'
+
+162	LOAD_GLOBAL       'build_snowman'
+165	LOAD_FAST         'crown'
+168	LOAD_FAST         'magic_key'
+171	CALL_FUNCTION_2   None
+174	POP_TOP           None
+175	LOAD_CONST        None
+178	RETURN_VALUE      None
+
+
+0	LOAD_CONST        ''
+3	STORE_FAST        'flag'
+
+6	SETUP_LOOP        '43'
+9	LOAD_FAST         'data'
+12	GET_ITER          None
+13	FOR_ITER          '42'
+16	STORE_FAST        'i'
+
+19	LOAD_FAST         'flag'
+22	LOAD_GLOBAL       'chr'
+25	LOAD_FAST         'i'
+28	LOAD_FAST         'byte'
+31	BINARY_XOR        None
+32	CALL_FUNCTION_1   None
+35	INPLACE_ADD       None
+36	STORE_FAST        'flag'
+39	JUMP_BACK         '13'
+42	POP_BLOCK         None
+43_0	COME_FROM         '6'
+
+43	LOAD_GLOBAL       'md5'
+46	LOAD_ATTR         'md5'
+49	LOAD_FAST         'flag'
+52	CALL_FUNCTION_1   None
+55	LOAD_ATTR         'hexdigest'
+58	CALL_FUNCTION_0   None
+61	LOAD_CONST        '6aad017de0ab1afec5b996b7445a0bf9'
+64	COMPARE_OP        '=='
+67	POP_JUMP_IF_FALSE '82'
+
+70	LOAD_CONST        "You've got it! The flag is: %s"
+73	LOAD_FAST         'flag'
+76	BINARY_MODULO     None
+77	PRINT_ITEM        None
+78	PRINT_NEWLINE_CONT None
+79	JUMP_FORWARD      '87'
+
+82	LOAD_CONST        "You've failed to retrieve the crown. You are an embarassment."
+85	PRINT_ITEM        None
+86	PRINT_NEWLINE_CONT None
+87_0	COME_FROM         '79'
+87	LOAD_CONST        None
+90	RETURN_VALUE      None
